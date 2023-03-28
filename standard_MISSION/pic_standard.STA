@@ -1,0 +1,66 @@
+
+ROM used:   1276/65536 (2%)
+            1276/65536 (2%) including unused fragments
+
+            1.4 Average locations per line
+            35.4 Average locations per statement
+
+RAM used:   31/3968 (1%) at main() level
+            69/3968 (2%) worst case
+
+Stack used: 5 worst case (2 in main + 3 for interrupts)
+Stack size: 31
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   76    36 100  pic_standard.c
+   20     0   0  user_setup.h
+  842     0   0  ..\..\..\..\Program Files (x86)\PICC\Devices\18LF4620.h
+----- -----
+  938    36 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     40   2    1             @delay_ms1
+0     64   3    1             @PUTCHAR_1_
+0     72   3    1    208  4.7  @GETCH_2_
+0    138   5   25    294  4.9  from_MAIN
+0     20   1    0    313  2.7  @const639
+0     32   1    2    347  6.3  @PSTRINGC_625
+0     36   1    2    347  6.3  @PSTRINGR_625
+0     36   1    0    347  6.3  @const646
+0    288  11    1    275  2.7  MAIN
+0     16   1    0    347  6.3  @const651
+0     16   1    0             @const652
+0     42   2    3             @PSTRINGCN_625
+0     18   1    0             @const655
+0      8   0    0             @const656
+0     10   0    0    259  3.7  @const657
+0     14   1    0    259  3.7  @const658
+0     24   1    0             @const661
+0     40   2    3    347  6.3  @DIV88
+0    104   4    2    347  6.3  @PRINTF_U_625
+0     88   3    7    347  6.3  data_print
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               13
+    Statements              36
+    Comments                155
+    Volume (V)              6869
+    Difficulty (D)          64.7
+    Effort to implement (E) 444318
+    Time to implement (T)   6 hours, 51 minutes
+    Est Delivered Bugs (B)  2
+    Cyclomatic Complexity   20
+    Maintainability (MI)    81
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00002     4  0  
+00004-00006     0  4  
+00008-000AC   166  0  
+000AE-0FFFE  1106  64256  
+
+
+
