@@ -1,0 +1,5 @@
+>>> Warning 216 "pic_standard.c" Line 103(1,2): Interrupts disabled during call to prevent re-entrancy:  (@PUTCHAR_1_)
+>>> Warning 216 "pic_standard.c" Line 103(1,2): Interrupts disabled during call to prevent re-entrancy:  (@PSTRINGC_625)
+      Memory usage:   ROM=3%      RAM=1% - 2%
+      0 Errors,  2 Warnings.
+Build Successful.

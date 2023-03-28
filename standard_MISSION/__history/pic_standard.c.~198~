@@ -7,9 +7,6 @@
 
 #define DATA_SIZE_MAX 1
 
-/*PIN DEFINE*/
-#define MCP3204_CS PIN_D7
-
 int8 get_data[DATA_SIZE_MAX] = {};
 
 void send_MAIN();
@@ -28,22 +25,6 @@ void from_MAIN() {
    data_print((char*)"get_data from MAIN:", get_data, DATA_SIZE_MAX);
 }
 
-int16 read_MCP3204(int8 channel){
-    int16 value = 0;
-    int8 address = 0b00001100; // Start bit, Single End mode, channnel
-    address |= (channel >> 1); // shift "channel" 1bit to right, add to address
-    
-    output_low(MCP3204_CS); // CS LOW
-    delay_us(1);
-    spi_write(address); //command send
-    value = spi_read(); //receive the first 8bit
-    value <<= 8;
-    value |= spi_read(); //receive the last 8bit
-    output_high(MCP3204_CS); // CS HIGH
-    
-    return value;
-}
-
 
 int main(void) {
 
@@ -55,9 +36,9 @@ int main(void) {
    disp("\r\nMISSION CONTROL START\r\n");
    
    /*SPI SETTING*/
-   setup_adc_ports(AN0); //AN0 to ANALOG INPUT
+   setup_adc_ports(sAN0); //AN0 to ANALOG INPUT
    setup_adc(ADC_CLOCK_INTERNAL); //using internal clock
-   setup_spi(SPI_MASTER | SPI_L_TO_H | SPI_CLK_DIV_4 | SPI_SS_DISABLED); //SPI setting
+   setup_spi(SPI_MASTER | SPI_L_TO_H | SPI_CLK_DIV_4 | SPI_MODE_00, SPI_SS_DISABLED) //SPI setting
 
    /*INTERRUPTS SETTING*/
    enable_interrupts(INT_EXT);
@@ -102,4 +83,18 @@ void data_print(char* data_name, int8* data, int8 data_size) {
    disp("\r\n");
 }
 
-
+int16 read_MCP3204(int8 channel){
+    int16 value = 0;
+    int8 address = 0b00001100; // Start bit, Single End mode, channnel
+    address |= (channel >> 1); // shift "channel" 1bit to right, add to address
+    
+    output_low(MCP3204_CS); // CS LOW
+    delay_us(1);
+    spi_write(address); //command send
+    value = spi_read(); //receive the first 8bit
+    value <<= 8;
+    value |= spi_read(); //receive the last 8bit
+    output_high(MCP3204_CS); // CS HIGH
+    
+    return value;
+}
