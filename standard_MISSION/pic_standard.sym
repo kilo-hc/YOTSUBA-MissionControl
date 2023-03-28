@@ -1,0 +1,135 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019     @INTERRUPT_AREA
+01A     get_data
+01B-01C @sprintf_string
+01D     send_MAIN.data
+01E     @PSTRINGCN_625.P1
+01E     MAIN.@SCRATCH1
+01F     @delay_ms1.P1
+01F     @PSTRINGCN_625.@SCRATCH1
+020     @PSTRINGCN_625.@SCRATCH2
+022     from_MAIN.i
+023-036 from_MAIN.@STRPARAM
+037     from_MAIN.@SCRATCH1
+037     @PSTRINGC_625.@SCRATCH1
+038     from_MAIN.@SCRATCH2
+038     @PSTRINGC_625.@SCRATCH2
+039-03A data_print.data_name
+039     from_MAIN.@SCRATCH3
+03A     from_MAIN.@SCRATCH4
+03B-03C data_print.data
+03B     @GETCH_2_.@SCRATCH1
+03D     data_print.data_size
+03E     data_print.i
+03F     @PSTRINGR_625.@SCRATCH1
+03F     data_print.@SCRATCH1
+040     @PRINTF_U_625.P1
+040     @PSTRINGR_625.@SCRATCH2
+041     @PRINTF_U_625.P1
+042     @PUTCHAR_1_.P1
+042     @DIV88.P2
+043     @DIV88.P1
+044     @DIV88.@SCRATCH1
+F83     PSP_DATA
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2_LOW
+FBB     CCP_2
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @WRITE_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P3
+FE9-FEA @WRITE_PROGRAM_MEMORY.P4
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0000AE  @const646.call
+0000D2  @PUTCHAR_1_
+000112  @PSTRINGC_625
+000132  @GETCH_2_
+00017A  @PSTRINGR_625
+00019E  @DIV88
+0001C6  @PRINTF_U_625
+00022E  data_print
+000286  from_MAIN
+000310  @const639.call
+000324  @const651.call
+000334  @const652.call
+000344  @const655.call
+000356  @const656.call
+00035E  @const657.call
+000368  @const658.call
+000376  @const661.call
+00038E  @delay_ms1
+0003B6  @PSTRINGCN_625
+0003E0  MAIN
+0003E0  @cinit1
+000400  @cinit2
+
+Project Directory:
+    C:\Users\sz6_admin\Desktop\standard_MISSION\
+
+Project Files:
+    pic_standard.c                                          [11-2-23 19:29  CRC=74CCE86C]
+    user_setup.h                                            [08-2-23 16:50  CRC=06A88147]
+    ..\..\..\..\Program Files (x86)\PICC\Devices\18LF4620.h [01-10-15 11:55  CRC=9F359353]
+
+Source signature=B9E09059
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=6E02
+
+Units:
+    pic_standard (main)
+
+Compiler Settings:
+    Processor:      PIC18LF4620
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   pic_standard.xsym
+    Errors:      pic_standard.err
+    Ext Symbols: pic_standard.esym
+    INHX32:      pic_standard.hex
+    Symbols:     pic_standard.sym
+    List:        pic_standard.lst
+    Debug/COFF:  pic_standard.cof
+    Project:     pic_standard.ccspjt
+    Call Tree:   pic_standard.tre
+    Statistics:  pic_standard.STA

@@ -1,0 +1,44 @@
+ÀÄpic_standard
+   ÃÄMAIN  0/288  Ram=1
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÃÄ@PSTRINGCN_625  0/42  Ram=3
+   ³  ³  ÀÄ@PUTCHAR_1_  0/64  Ram=1
+   ³  ÃÄ@PSTRINGC_625  0/32  Ram=2
+   ³  ³  ÀÄ@PUTCHAR_1_  0/64  Ram=1
+   ³  ÃÄ@PUTCHAR_1_  0/64  Ram=1
+   ³  ÃÄ@PUTCHAR_1_  0/64  Ram=1
+   ³  ÃÄ@PSTRINGCN_625  0/42  Ram=3
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_625  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PUTCHAR_1_  0/64  Ram=1
+   ³  ÃÄ@PSTRINGC_625  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PUTCHAR_1_  0/64  Ram=1
+   ³  ÃÄ@PUTCHAR_1_  0/64  Ram=1
+   ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÀÄ@PSTRINGC_625  0/32  Ram=2
+   ³     ÀÄ*
+   ÀÄfrom_MAIN  0/138  Ram=25
+      ÃÄ@PSTRINGC_625  0/32  Ram=2
+      ³  ÀÄ*
+      ÃÄ@GETCH_2_  0/72  Ram=1
+      ÃÄ@PSTRINGR_625  0/36  Ram=2
+      ³  ÀÄ@PUTCHAR_1_  0/64  Ram=1
+      ÃÄ@const646  0/36  Ram=0
+      ÀÄdata_print  0/88  Ram=7
+         ÃÄ@PSTRINGR_625  0/36  Ram=2
+         ³  ÀÄ*
+         ÃÄ@PUTCHAR_1_  0/64  Ram=1
+         ÃÄ@PUTCHAR_1_  0/64  Ram=1
+         ÃÄ@PUTCHAR_1_  0/64  Ram=1
+         ÃÄ@PRINTF_U_625  0/104  Ram=2
+         ³  ÃÄ@DIV88  0/40  Ram=3
+         ³  ÃÄ@PUTCHAR_1_  0/64  Ram=1
+         ³  ÃÄ@DIV88  0/40  Ram=3
+         ³  ÃÄ@PUTCHAR_1_  0/64  Ram=1
+         ³  ÀÄ@PUTCHAR_1_  0/64  Ram=1
+         ÃÄ@PUTCHAR_1_  0/64  Ram=1
+         ÀÄ@PUTCHAR_1_  0/64  Ram=1
