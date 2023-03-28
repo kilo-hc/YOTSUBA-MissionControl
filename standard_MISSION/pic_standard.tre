@@ -1,5 +1,5 @@
 ÀÄpic_standard
-   ÃÄMAIN  0/288  Ram=1
+   ÃÄMAIN  0/404  Ram=3
    ³  ÃÄ@cinit1  (Inline)  Ram=0
    ³  ÃÄ@delay_ms1  0/40  Ram=1
    ³  ÃÄ@PSTRINGCN_625  0/42  Ram=3
@@ -17,7 +17,15 @@
    ³  ³  ÀÄ*
    ³  ÃÄ@PUTCHAR_1_  0/64  Ram=1
    ³  ÃÄ@PUTCHAR_1_  0/64  Ram=1
+   ³  ÃÄ@PSTRINGC_625  0/32  Ram=2
+   ³  ³  ÀÄ*
    ³  ÃÄ@delay_ms1  0/40  Ram=1
+   ³  ÃÄread_MCP3204  0/70  Ram=4
+   ³  ÃÄ@PSTRINGCN_625  0/42  Ram=3
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PRINTF_LD_625  0/256  Ram=9
+   ³  ³  ÀÄ@PUTCHAR_1_  0/64  Ram=1
+   ³  ÃÄ@PUTCHAR_1_  0/64  Ram=1
    ³  ÃÄ@delay_ms1  0/40  Ram=1
    ³  ÀÄ@PSTRINGC_625  0/32  Ram=2
    ³     ÀÄ*

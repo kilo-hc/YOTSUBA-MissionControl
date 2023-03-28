@@ -28,50 +28,62 @@
 01A     get_data
 01B-01C @sprintf_string
 01D     send_MAIN.data
-01E     @PSTRINGCN_625.P1
-01E     MAIN.@SCRATCH1
-01F     @delay_ms1.P1
-01F     @PSTRINGCN_625.@SCRATCH1
-020     @PSTRINGCN_625.@SCRATCH2
-022     from_MAIN.i
-023-036 from_MAIN.@STRPARAM
-037     from_MAIN.@SCRATCH1
-037     @PSTRINGC_625.@SCRATCH1
-038     from_MAIN.@SCRATCH2
-038     @PSTRINGC_625.@SCRATCH2
-039-03A data_print.data_name
-039     from_MAIN.@SCRATCH3
-03A     from_MAIN.@SCRATCH4
-03B-03C data_print.data
-03B     @GETCH_2_.@SCRATCH1
-03D     data_print.data_size
-03E     data_print.i
-03F     @PSTRINGR_625.@SCRATCH1
-03F     data_print.@SCRATCH1
-040     @PRINTF_U_625.P1
-040     @PSTRINGR_625.@SCRATCH2
-041     @PRINTF_U_625.P1
-042     @PUTCHAR_1_.P1
-042     @DIV88.P2
-043     @DIV88.P1
-044     @DIV88.@SCRATCH1
+01E-01F MAIN.value
+020-021 @PRINTF_LD_625.P1
+020     @PSTRINGCN_625.P2
+020     read_MCP3204.channel
+020     MAIN.@SCRATCH1
+021     @delay_ms1.P1
+021-022 read_MCP3204.value
+021     @PSTRINGCN_625.@SCRATCH1
+022     @PSTRINGCN_625.@SCRATCH2
+022     @PRINTF_LD_625.@SCRATCH1
+023     read_MCP3204.address
+023     @PRINTF_LD_625.@SCRATCH2
+024     @PRINTF_LD_625.@SCRATCH3
+025     @PRINTF_LD_625.@SCRATCH4
+026     @PRINTF_LD_625.@SCRATCH5
+027     @PRINTF_LD_625.@SCRATCH6
+028     @PRINTF_LD_625.@SCRATCH7
+02A     from_MAIN.i
+02B-03E from_MAIN.@STRPARAM
+03F     from_MAIN.@SCRATCH1
+03F     @PSTRINGC_625.@SCRATCH1
+040     from_MAIN.@SCRATCH2
+040     @PSTRINGC_625.@SCRATCH2
+041-042 data_print.data_name
+041     from_MAIN.@SCRATCH3
+042     from_MAIN.@SCRATCH4
+043-044 data_print.data
+043     @GETCH_2_.@SCRATCH1
+045     data_print.data_size
+046     data_print.i
+047     @PSTRINGR_625.@SCRATCH1
+047     data_print.@SCRATCH1
+048     @PRINTF_U_625.P1
+048     @PSTRINGR_625.@SCRATCH2
+049     @PRINTF_U_625.P1
+04A     @PUTCHAR_1_.P1
+04A     @DIV88.P2
+04B     @DIV88.P1
+04C     @DIV88.@SCRATCH1
 F83     PSP_DATA
 FB4.6   C1OUT
 FB4.7   C2OUT
 FBB     CCP_2_LOW
 FBB     CCP_2
 FBC     CCP_2_HIGH
-FBE     CCP_1
 FBE     CCP_1_LOW
+FBE     CCP_1
 FBF     CCP_1_HIGH
 FE1-FE2 @WRITE_PACKED_MEMORY.P1
 FE1-FE2 @READ_PACKED_MEMORY.P2
-FE9-FEA @READ_PACKED_MEMORY.P1
-FE9-FEA @WRITE_PACKED_MEMORY.P2
-FE9-FEA @READ_PROGRAM_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P3
 FE9-FEA @WRITE_PROGRAM_MEMORY.P4
-FF6-FF8 @READ_PROGRAM_MEMORY.P1
-FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
 
 ROM Allocation:
 0000AE  @const646.call
@@ -84,31 +96,35 @@ ROM Allocation:
 00022E  data_print
 000286  from_MAIN
 000310  @const639.call
-000324  @const651.call
-000334  @const652.call
-000344  @const655.call
-000356  @const656.call
-00035E  @const657.call
-000368  @const658.call
-000376  @const661.call
-00038E  @delay_ms1
-0003B6  @PSTRINGCN_625
-0003E0  MAIN
-0003E0  @cinit1
-000400  @cinit2
+000324  @const655.call
+000334  @const656.call
+000344  @const659.call
+000356  @const660.call
+00035E  @const661.call
+000368  @const662.call
+000382  @const664.call
+000392  @const667.call
+0003A0  @const670.call
+0003B8  @delay_ms1
+0003E0  @PSTRINGCN_625
+00040A  read_MCP3204
+000450  @PRINTF_LD_625
+000550  MAIN
+000550  @cinit1
+000570  @cinit2
 
 Project Directory:
-    C:\Users\sz6_admin\Desktop\standard_MISSION\
+    C:\Users\sz6_admin\Documents\GitHub\YOTSUBA-MissionControl\standard_MISSION\
 
 Project Files:
-    pic_standard.c                                          [11-2-23 19:29  CRC=74CCE86C]
-    user_setup.h                                            [08-2-23 16:50  CRC=06A88147]
-    ..\..\..\..\Program Files (x86)\PICC\Devices\18LF4620.h [01-10-15 11:55  CRC=9F359353]
+    pic_standard.c                                          [28-3-23 11:55  CRC=3CC4B67F]
+    user_setup.h                                            [28-3-23 10:59  CRC=06A88147]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18LF4620.h [01-10-15 11:55  CRC=9F359353]
 
-Source signature=B9E09059
+Source signature=81D85E6C
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=6E02
+Hex file CRC=8145
 
 Units:
     pic_standard (main)

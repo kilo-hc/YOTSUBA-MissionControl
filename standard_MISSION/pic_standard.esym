@@ -1,10 +1,10 @@
-F N "data_print" 0 64 ""
-D G "__PCH__" 0 77 ""5.050""
-D G "__DEVICE__" 0 77 "4620"
-D G "__DATE__" 0 77 ""11-2-23""
-D G "__TIME__" 0 77 ""19:29:32""
-D G "_UNICODE" 0 77 ""?""
-D G "__EVAL" 0 77 ""?"" "Standard Header file for the PIC18LF4620 device ////////////////"
+F N "data_print" 0 94 ""
+D G "__PCH__" 0 107 ""5.050""
+D G "__DEVICE__" 0 107 "4620"
+D G "__DATE__" 0 107 ""28-3-23""
+D G "__TIME__" 0 107 ""11:55:41""
+D G "_UNICODE" 0 107 ""?""
+D G "__EVAL" 0 107 ""?"" "Standard Header file for the PIC18LF4620 device ////////////////"
 c L "set_tris_a" 2 3 6 "FUNCTION"
 f N "set_tris_a" 2 43 ""
 v L "value" 2 43 "int8" `54 
@@ -1193,31 +1193,51 @@ d G "INT_OSCF" 2 839 "0x00A080"
 D G "disp" 1 18 "(...) fprintf(terminal, __VA_ARGS__)"
 D G "INTERRUPT_MAIN_PIN" 0 6 "PIN_B5"
 D G "DATA_SIZE_MAX" 0 8 "1"
-V G "get_data" 0 10 "int8[1]" `632 
-F N "send_MAIN" 0 12 ""
-f G "send_MAIN" 0 12 "void()" `633 
-F N "data_print" 0 13 ""
-V L "data_name" 0 13 "*int8" `635 
-V L "data" 0 13 "*int8" `636 
-V L "data_size" 0 13 "int8" `637 
-f G "data_print" 0 13 "void(*int8 data_name,*int8 data,int8 data_size)" `634 
-F N "from_MAIN" 0 16 ""
-F G "from_MAIN" 0 16 "void()" `638 
-V L "i" 0 18 "int8" `644 
-F N "MAIN" 0 29 ""
-F G "MAIN" 0 29 "int8()" `648 
+D G "MCP3204_CS" 0 11 "PIN_D7"
+V G "get_data" 0 13 "int8[1]" `632 
+F N "send_MAIN" 0 15 ""
+f G "send_MAIN" 0 15 "void()" `633 
+F N "data_print" 0 16 ""
+V L "data_name" 0 16 "*int8" `635 
+V L "data" 0 16 "*int8" `636 
+V L "data_size" 0 16 "int8" `637 
+f G "data_print" 0 16 "void(*int8 data_name,*int8 data,int8 data_size)" `634 
+F N "from_MAIN" 0 19 ""
+F G "from_MAIN" 0 19 "void()" `638 
+V L "i" 0 21 "int8" `644 
+F N "read_MCP3204" 0 31 ""
+V L "channel" 0 31 "int8" `649 
+F G "read_MCP3204" 0 31 "int16(int8 channel)" `648 
+V L "value" 0 32 "int16" `650 
+V L "address" 0 33 "int8" `651 
+C L "read_MCP3204" 0 3 1 "FUNCTION"
+C L "read_MCP3204" 0 3 1 "FUNCTION"
+C L "read_MCP3204" 0 3 1 "FUNCTION"
+C L "read_MCP3204" 0 3 1 "FUNCTION"
+C L "read_MCP3204" 0 3 1 "FUNCTION"
+C L "read_MCP3204" 0 3 1 "FUNCTION"
+C L "read_MCP3204" 0 3 1 "FUNCTION"
+F N "MAIN" 0 48 ""
+F G "MAIN" 0 48 "int8()" `652 
 C L "MAIN" 0 3 1 "FUNCTION"
 C L "MAIN" 0 3 1 "FUNCTION"
-F N "send_MAIN" 0 51 ""
-F G "send_MAIN" 0 51 "void()" `633 
-V L "data" 0 52 "int8" `659 
-V L "i" 0 55 "int8" `660 
-F N "data_print" 0 64 ""
-V L "data_name" 0 64 "*int8" `635 
-V L "data" 0 64 "*int8" `636 
-V L "data_size" 0 64 "int8" `671 
-F G "data_print" 0 64 "void(*int8 data_name,*int8 data,int8 data_size)" `634 
-V L "i" 0 66 "int8" `669 
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 2 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+C L "MAIN" 0 3 1 "FUNCTION"
+V L "value" 0 70 "int16" `663 
+C L "MAIN" 0 3 1 "FUNCTION"
+F N "send_MAIN" 0 81 ""
+F G "send_MAIN" 0 81 "void()" `633 
+V L "data" 0 82 "int8" `668 
+V L "i" 0 85 "int8" `669 
+F N "data_print" 0 94 ""
+V L "data_name" 0 94 "*int8" `635 
+V L "data" 0 94 "*int8" `636 
+V L "data_size" 0 94 "int8" `680 
+F G "data_print" 0 94 "void(*int8 data_name,*int8 data,int8 data_size)" `634 
+V L "i" 0 96 "int8" `678 
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 1
